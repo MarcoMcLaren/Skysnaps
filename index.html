@@ -13,6 +13,7 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css.css" rel="stylesheet" />
     </head>
@@ -252,15 +253,35 @@
                             </div>
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p style="color: white;"><u>Check the necessary boxes</u></p>
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1" style="color: white;"> I do have a COVID certificate</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2" style="color: white;"> I do not have a covid certificate</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3" style="color: white;"> Unsure of my current COVID status</label><br><br>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p style="color: white;"><u>Choose Gender</u></p>
+                                        <input type="radio" id="male" name="gender" value="male">
+                                        <label for="male" style="color: white;">Male</label><br>
+                                        <input type="radio" id="female" name="gender" value="female">
+                                        <label for="female" style="color: white;">Female</label><br>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                         <div class="col-md-6">
+                            
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
                                 <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                            
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                
                             </div>
                         </div>
                     </div>
@@ -268,9 +289,7 @@
                     <div class="d-none" id="submitSuccessMessage">
                         <div class="text-center text-white mb-3">
                             <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                           THANK YOU FOR SUBMITTING FORM
                         </div>
                     </div>
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
